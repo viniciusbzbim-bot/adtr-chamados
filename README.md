@@ -90,44 +90,55 @@ Clone o repositório:
 
 ```bash
 git clone https://github.com/viniciusbzbim-bot/adtr-chamados.git
-
+```
 2. Entrar na pasta
+   
+```bash
 cd adtr-chamados/adtr-chamados
-
-3. Instalar dependências PHP
+```
+4. Instalar dependências PHP
+```bash
 composer install
-
-4. Instalar dependências front-end
+```
+6. Instalar dependências front-end
+```bash
 npm install
-
-5. Configurar o arquivo .env
+```
+8. Configurar o arquivo .env
+```bash
 cp .env.example .env
-
+```
 Configure o PostgreSQL:
+```bash
 DB_CONNECTION=pgsql
 DB_HOST=127.0.0.1
 DB_PORT=5432
 DB_DATABASE=adtr_chamados
 DB_USERNAME=postgres
 DB_PASSWORD=sua_senha
-
+```
 6. Gerar chave da aplicação
+```bash
 php artisan key:generate
-
+```
 7. Rodar migrations
+```bash
 php artisan migrate
-
+```
 8. Compilar assets
+```bash
 npm run build
-
+```
 9. Iniciar servidor
+```bash
 php artisan serve
-
+```
 Acesse:
+```bash
 http://127.0.0.1:8000
+```
 
-*************************************************
-!!! Decisões Técnicas
+## Decisões Técnicas
 Utilização do Laravel Breeze para autenticação
 Utilização de Blade para renderização das views
 Uso de SweetAlert2 para melhorar experiência visual
@@ -136,8 +147,8 @@ API REST separada das rotas web
 PostgreSQL utilizado como banco principal
 Interface responsiva utilizando Tailwind CSS
 
-*************************************************
-!!! Melhorias Futuras
+
+## Melhorias Futuras
 
 Com mais tempo poderiam ser adicionados:
 
@@ -151,8 +162,8 @@ Swagger/OpenAPI
 Controle de permissões
 API autenticada com Laravel Sanctum
 
-*************************************************
-!!! Dificuldades Encontradas
+
+## Dificuldades Encontradas
 Configuração inicial da API REST
 Ajustes entre rotas web e api
 Personalização visual da aplicação
